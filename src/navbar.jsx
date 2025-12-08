@@ -31,6 +31,7 @@ export default function Navbar(){
     { name: "Segments", link: "/segments" },
     { name: "About Us", link: "/aboutus" },
     { name: "Contact Us", link: "/contact" },
+    { name: "Register Now", link: "/register" },
   ];
 
   const [open, setOpen] = useState(false);
@@ -112,8 +113,52 @@ export default function Navbar(){
             {navItems.map((item) => {
               const active = pathname === item.link;
               const isPartners = item.name === "Partners";
+              const isRegister = item.name === "Register Now";
 
               if (!isPartners) {
+                if (isRegister) {
+                  return (
+                    <li key={item.link}>
+                      <motion.a
+                        href={item.link}
+                        aria-current={active ? "page" : undefined}
+                        className="group relative px-5 py-2 text-sm/6 font-semibold text-white rounded-full"
+                        whileHover={{ scale: 1.05 }}
+                        whileTap={{ scale: 0.95 }}
+                        style={{
+                          background: "linear-gradient(90deg, rgba(251, 191, 36, 0.1), transparent)",
+                          border: "2px solid transparent",
+                          backgroundClip: "padding-box",
+                        }}
+                      >
+                        {/* Animated border using pseudo-element approach */}
+                        <motion.div
+                          className="absolute -inset-0.5 rounded-full pointer-events-none"
+                          animate={{
+                            background: [
+                              "conic-gradient(from 0deg, #fbbf24, #f59e0b, #d97706, #fbbf24)",
+                              "conic-gradient(from 90deg, #fbbf24, #f59e0b, #d97706, #fbbf24)",
+                              "conic-gradient(from 180deg, #fbbf24, #f59e0b, #d97706, #fbbf24)",
+                              "conic-gradient(from 270deg, #fbbf24, #f59e0b, #d97706, #fbbf24)",
+                              "conic-gradient(from 360deg, #fbbf24, #f59e0b, #d97706, #fbbf24)",
+                            ]
+                          }}
+                          transition={{
+                            duration: 4,
+                            repeat: Infinity,
+                            ease: "linear",
+                          }}
+                          style={{
+                            zIndex: -1,
+                            borderRadius: "9999px",
+                          }}
+                        />
+                        {item.name}
+                      </motion.a>
+                    </li>
+                  );
+                }
+
                 return (
                   <li key={item.link}>
                     <motion.a
