@@ -1,7 +1,7 @@
 "use client";
 
-import React from "react";
-import { motion } from "framer-motion";
+import React, { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import {
   Users,
   Trophy,
@@ -10,8 +10,12 @@ import {
   Globe2,
   Sparkles,
   Layers,
+  X,
+  ChevronLeft,
+  ChevronRight,
 } from "lucide-react";
-import PrevEvents from "./PrevEvents.jsx";
+// OurGrossReach removed per request
+
 const container = {
   hidden: { opacity: 0, y: 24 },
   show: {
@@ -53,87 +57,159 @@ const stats = [
   },
 ];
 
-const workshops = [
-  {
-    title: "PCB Design Workshop",
-    desc: "End-to-end journey from schematic to layout optimization and fabrication.",
-    image: "https://aust.edu/storage/files/8d9SsRHO4Rcfmu4sGnLJNakx916tpa36G4BZqpYl.jpg",
-  },
-  {
-    title: "Robotic Arm Workshop",
-    desc: "Mechanism, kinematics and motion control with sensors and microcontrollers.",
-    image: "https://aust.edu/storage/files/dyHnxxhWTC8vX8ou5uWeSjFIWDAEHzMf0WkZlTiT.jpg",
-  },
-  {
-    title: "IoT & Automation Workshop",
-    desc: "Smart systems combining sensors, actuators and cloud-connected controllers.",
-    image: "https://aust.edu/storage/files/9pMxQnQCKlHFjKbAhNh6kQ4r9PpZINqik4vzzKYo.jpg",
-  },
-  {
-    title: "Drone Technology Workshop",
-    desc: "UAV design, aerodynamics, propeller choice and flight control basics.",
-    image: "https://aust.edu/storage/files/OyldmWpRfajcamGP9oaM6fj3XZPHYsVHZovTTM4i.jpg",
-  },
-  {
-    title: "Firefighting Robot Workshop",
-    desc: "Autonomous hazard-detecting robots built in team-based project sprints.",
-    image: "https://aust.edu/storage/files/lLhKxAVqn0oWbckJLf01XKy3MQp5nx5H2ppLPDSo.png",
-  },
-];
-
 const achievements = [
   {
-    title: "Champion – Soccer Bot",
-    event: "BAIUST EEE Day 2024",
-    image: "https://ik.imagekit.io/mekt2pafz/Achievements/Baiust.jpeg",
+    title: "Bot Fight",
+    event: "Robomania 1.0 Champion",
+    image: "https://ik.imagekit.io/xq2aftghg/Robomania%201.0/223.jpg",
+    winners: [
+      { label: "Winner", image: "https://ik.imagekit.io/xq2aftghg/Robomania%201.0/bot%20fight%20winners(team).jpg" },
+      { label: "2nd Runner-Up", image: "https://ik.imagekit.io/xq2aftghg/Robomania%201.0/boot%20fight%202nd%20runner%20up.jpg" },
+    ],
   },
   {
-    title: "Champion – Soccer Bot",
-    event: "JUSC National Science Festival 2024",
-    image: "https://ik.imagekit.io/mekt2pafz/Achievements/Jusc.jpeg",
+    title: "Soccer Bot",
+    event: "Robomania 1.0 Champion",
+    image: "https://ik.imagekit.io/xq2aftghg/Robomania%201.0/fd.jpg",
+    winners: [
+      { label: "1st Runner-Up", image: "https://ik.imagekit.io/xq2aftghg/Robomania%201.0/soccer%20bot%201st%20runner%20up.jpg" },
+      { label: "2nd Runner-Up", image: "https://ik.imagekit.io/xq2aftghg/Robomania%201.0/soccer%20bot%202nd%20runner%20up.jpg" },
+    ],
   },
-
   {
-    title: "1st Runner-Up – Robotics Contest",
-    event: "Orbit Engineering Expo 2.0 (Nepal 2024)",
-    image: "https://ik.imagekit.io/mekt2pafz/Achievements/Orbit.jpeg",
+    title: "Line Follower",
+    event: "Robomania 1.0 Champion",
+    image: "https://ik.imagekit.io/xq2aftghg/Robomania%201.0/444.jpg",
+    winners: [
+      { label: "Winner", image: "https://ik.imagekit.io/xq2aftghg/Robomania%201.0/lfr%20winners(team).jpg" },
+      { label: "1st Runner-Up", image: "https://drive.google.com/uc?export=view&id=1U6EaMNK8vx257iZVEbBhkddc8LGxNlCy" },
+      { label: "2nd Runner-Up", image: "https://ik.imagekit.io/xq2aftghg/Robomania%201.0/lfr%202nd%20runner%20up.jpg" },
+    ],
   },
- 
   {
-    title: "2nd Runner-Up – RoboCup Championship",
-    event: "DUET TechFest 2023",
-    image: "https://ik.imagekit.io/mekt2pafz/Achievements/Duet.jpeg",
+    title: "Project Showcasing",
+    event: "Robomania 1.0 Champion",
+    image: "https://ik.imagekit.io/xq2aftghg/Robomania%201.0/22.jpg",
+    winners: [
+      { label: "Winner", image: "https://ik.imagekit.io/xq2aftghg/Robomania%201.0/project%20show%20case%20winners%20(team).jpg" },
+      { label: "2nd Runner-Up", image: "https://ik.imagekit.io/xq2aftghg/Robomania%201.0/project%20show%202nd%20runner%20up.jpg" },
+    ],
   },
- 
 ];
 
-const PreviousEvents = [
-  {
-    title: "AUST Rover Challenge (ARC 2022)",
-    subtitle: "National Robotics Competition",
-    desc: "First-ever ARC with four competitive segments – Rover, Soccer Bot, Line Follower and Hardware Showcase.",
-    highlight: "Multi-segment national robotics fest hosted at AUST.",
-    image: "https://ik.imagekit.io/mekt2pafz/arc%201.0/banner%201.0?updatedAt=1763666844586",
-  },
-  {
-    title: "AUST Rover Challenge 2.0 (2025)",
-    subtitle: "31+ Universities · 500+ Competitors",
-    desc: "A landmark national event across five segments with a BDT 1.5+ lakh prize pool.",
-    highlight: "One of Bangladesh’s largest university-level rover competitions.",
-    image: "https://ik.imagekit.io/mekt2pafz/1000032065%20(1).jpg?updatedAt=1763661292408",
-  },
-  {
-    title: "Robomania 1.0 (2024)",
-    subtitle: "Intra AUST Robotics Festival",
-    desc: "An intra-university fest giving AUST students their first competitive robotics arena with 200+ participants.",
-    highlight: "BDT 33,000 prize pool and multiple exciting segments.",
-    image: "https://ik.imagekit.io/mekt2pafz/485658163_695759766349341_2156621265921599892_n.jpg?updatedAt=1763661767040",
-  },
-];
+const SegmentModal = ({ segment, onClose }) => {
+  const [index, setIndex] = useState(0);
+
+  React.useEffect(() => setIndex(0), [segment]);
+
+  React.useEffect(() => {
+    const onKey = (e) => {
+      if (!segment) return;
+      if (e.key === "Escape") onClose();
+      if (e.key === "ArrowLeft") setIndex((i) => (i === 0 ? segment.winners.length - 1 : i - 1));
+      if (e.key === "ArrowRight") setIndex((i) => (i + 1) % segment.winners.length);
+    };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [segment, onClose]);
+
+  if (!segment) return null;
+
+  const winners = segment.winners || [];
+
+  return (
+    <>
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        className="fixed inset-0 bg-black/85 backdrop-blur-sm z-[9999]"
+        onClick={onClose}
+      />
+
+      <div className="fixed inset-0 flex items-center justify-center p-4 z-[10000]">
+        <motion.div
+          initial={{ scale: 0.98, opacity: 0, y: 12 }}
+          animate={{ scale: 1, opacity: 1, y: 0 }}
+          exit={{ scale: 0.98, opacity: 0, y: 12 }}
+          transition={{ type: "spring", damping: 20, stiffness: 300 }}
+          className="relative w-full max-w-4xl bg-gradient-to-br from-black/95 to-zinc-900 border border-amber-500/20 rounded-xl overflow-hidden shadow-2xl p-4"
+          onClick={(e) => e.stopPropagation()}
+        >
+          <button
+            onClick={onClose}
+            className="absolute right-3 top-3 bg-amber-500/80 text-black p-1.5 rounded-full z-20"
+          >
+            <X size={16} />
+          </button>
+
+          <h3 className="text-lg font-bold text-amber-100 mb-2">
+            {segment.title}
+          </h3>
+          <p className="text-sm text-amber-200/80 mb-4">{segment.event}</p>
+
+          {winners.length > 0 ? (
+            <div className="flex flex-col gap-3">
+              <div className="relative w-full flex items-center justify-center">
+                <button
+                  onClick={() => setIndex((i) => (i === 0 ? winners.length - 1 : i - 1))}
+                  className="absolute left-2 z-20 bg-black/40 text-amber-200 p-2 rounded-full hover:bg-black/60"
+                >
+                  <ChevronLeft size={20} />
+                </button>
+
+                <img
+                  src={winners[index].image}
+                  alt={winners[index].label}
+                  className="w-full max-h-[560px] object-contain rounded-md bg-black/30"
+                />
+
+                <button
+                  onClick={() => setIndex((i) => (i + 1) % winners.length)}
+                  className="absolute right-2 z-20 bg-black/40 text-amber-200 p-2 rounded-full hover:bg-black/60"
+                >
+                  <ChevronRight size={20} />
+                </button>
+              </div>
+
+              <div className="flex items-center justify-center gap-2 pt-2 overflow-x-auto">
+                {winners.map((w, i) => (
+                  <button
+                    key={i}
+                    onClick={() => setIndex(i)}
+                    className={`border rounded-md overflow-hidden ${
+                      i === index ? "ring-2 ring-amber-400" : ""
+                    }`}
+                  >
+                    <img
+                      src={w.image}
+                      alt={w.label}
+                      className="h-20 w-28 object-cover"
+                    />
+                  </button>
+                ))}
+              </div>
+
+              <div className="text-center text-amber-200/90 mt-2">
+                <div className="font-semibold">{winners[index].label}</div>
+              </div>
+            </div>
+          ) : (
+            <div className="text-center text-amber-200/80">
+              No winner images available for this segment.
+            </div>
+          )}
+        </motion.div>
+      </div>
+    </>
+  );
+};
 
 const About = () => {
+  const [selectedSegment, setSelectedSegment] = useState(null);
+
   return (
-    <div className="space-y-20 pb-8 px-4 md:px-6 lg:px-10 font-noto-kr">
+    <div className="space-y-20 pb-20 px-4 md:px-6 lg:px-10 font-noto-kr">
       {/* HERO / ABOUT AUSTRC */}
       <section className="pt-10 md:pt-16">
         <motion.div
@@ -237,70 +313,6 @@ const About = () => {
         </motion.div>
       </section>
 
-      {/* WORKSHOPS & BOOTCAMPS */}
-      <section className="mx-auto max-w-6xl">
-        <motion.div
-          variants={container}
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true, amount: 0.3 }}
-          className="space-y-8"
-        >
-          <motion.div variants={item} className="text-center max-w-3xl mx-auto">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-3 bg-linear-to-r from-amber-200 via-amber-400 to-amber-600 bg-clip-text text-transparent">
-              Workshops &amp; Bootcamps
-            </h2>
-            <p className="text-sm sm:text-base md:text-lg text-amber-100/80 leading-relaxed">
-              We believe{" "}
-              <span className="font-semibold text-amber-200">
-                practical learning
-              </span>{" "}
-              is the backbone of robotics. Our 20+ workshops transform
-              fundamentals into real prototypes, combining programming, design
-              and hardware control.
-            </p>
-          </motion.div>
-
-          <motion.div
-            variants={item}
-            className="grid gap-6 sm:gap-7 md:grid-cols-2 lg:grid-cols-3"
-          >
-            {workshops.map((w) => (
-              <motion.article
-                key={w.title}
-                whileHover={{ y: -6, scale: 1.02 }}
-                className="group flex flex-col overflow-hidden rounded-2xl border border-amber-500/25 bg-black/60 backdrop-blur-xl shadow-[0_0_45px_rgba(0,0,0,0.85)]"
-              >
-                {/* workshop image */}
-                <div className="relative h-40 sm:h-44 overflow-hidden">
-                  <motion.img
-                    src={w.image}
-                    alt={w.title}
-                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
-                    initial={{ scale: 1.05 }}
-                    whileInView={{ scale: 1 }}
-                    viewport={{ once: true }}
-                  />
-                  <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
-                </div>
-
-                <div className="flex flex-1 flex-col p-4 sm:p-5">
-                  <h3 className="text-lg sm:text-xl font-semibold text-amber-100">
-                    {w.title}
-                  </h3>
-                  <p className="mt-2 text-xs sm:text-sm text-amber-100/75 leading-relaxed">
-                    {w.desc}
-                  </p>
-                  <div className="mt-3 text-[0.7rem] uppercase tracking-[0.18em] text-amber-300/80">
-                    Bootcamp · Hands-on · Team-based
-                  </div>
-                </div>
-              </motion.article>
-            ))}
-          </motion.div>
-        </motion.div>
-      </section>
-
       {/* ACHIEVEMENTS */}
       <section className="mx-auto max-w-6xl">
         <motion.div
@@ -317,18 +329,17 @@ const About = () => {
             <div className="space-y-3 max-w-xl">
               <div className="inline-flex items-center gap-2 rounded-full border border-amber-400/40 bg-amber-500/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.18em] text-amber-200">
                 <Trophy className="h-4 w-4 text-amber-300" />
-                <span>Achievements</span>
+                <span>Champion</span>
               </div>
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold bg-linear-to-r from-amber-200 via-amber-400 to-amber-600 bg-clip-text text-transparent">
-                Championing Innovation
+                Champion of Robomania 1.0
               </h2>
               <p className="text-sm sm:text-base md:text-lg text-amber-100/80 leading-relaxed">
-                AUSTRC teams have repeatedly proven their{" "}
+                Excellence drives innovation—our victory across all four segments reflects the dedication, creativity and teamwork that define AUSTRC.{" "}
                 <span className="font-semibold text-amber-200">
-                  engineering excellence
+                  Every challenge conquered brings us closer to our mission
                 </span>{" "}
-                across national and international arenas – from soccer bots to
-                rover challenges.
+                of shaping the future of robotics.
               </p>
             </div>
 
@@ -337,11 +348,10 @@ const About = () => {
               className="mt-2 md:mt-0 rounded-2xl border border-amber-500/40 bg-amber-50/5 px-4 py-3 text-amber-100/80 text-sm sm:text-base"
             >
               <p className="font-semibold text-amber-200">
-                Multiple Champion & Runner-Up titles
+                4 Segment Victory
               </p>
               <p className="text-xs sm:text-sm">
-                These victories reflect the dedication, teamwork and technical
-                depth of AUSTRC members.
+                Bot Fight · Soccer Bot · Line Follower · Project Showcasing
               </p>
             </motion.div>
           </motion.div>
@@ -354,7 +364,8 @@ const About = () => {
               <motion.div
                 key={a.title + a.event}
                 whileHover={{ y: -6, scale: 1.02 }}
-                className="group overflow-hidden rounded-2xl border border-amber-400/25 bg-black/60 backdrop-blur-xl"
+                onClick={() => setSelectedSegment(a)}
+                className="group cursor-pointer overflow-hidden rounded-2xl border border-amber-400/25 bg-black/60 backdrop-blur-xl"
               >
                 <div className="relative h-32 sm:h-36 overflow-hidden">
                   <motion.img
@@ -384,21 +395,16 @@ const About = () => {
         </motion.div>
       </section>
 
-      {/* PREVIOUS EVENTS */}
-      <section className="mx-auto max-w-6xl">
-        <motion.div
-          variants={container}
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true, amount: 0.3 }}
-          className="space-y-6"
-        >
-          {/* Previous Events */}
-          <div className="mx-auto max-w-6xl gap-10 rounded-3xl border border-[#554110] p-3 backdrop-blur-md md:p-4">
-            <PrevEvents />
-          </div>
-        </motion.div>
-      </section>
+      <AnimatePresence>
+        {selectedSegment && (
+          <SegmentModal
+            segment={selectedSegment}
+            onClose={() => setSelectedSegment(null)}
+          />
+        )}
+      </AnimatePresence>
+
+      {/* OurGrossReach section removed */}
     </div>
   );
 };
