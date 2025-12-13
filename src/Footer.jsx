@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { FaFacebookF, FaInstagram, FaLinkedinIn, FaGlobe } from "react-icons/fa";
+import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 import { Mail, MapPin, Phone, ArrowRight, Heart } from "lucide-react";
 
 const Footer = () => {
@@ -24,19 +24,12 @@ const Footer = () => {
       href: "https://www.linkedin.com/company/aust-robotics-club",
       label: "LinkedIn",
       color: "hover:bg-blue-600"
-    },
-    {
-      icon: FaGlobe,
-      href: "#",
-      label: "Website",
-      color: "hover:bg-amber-500"
     }
   ];
 
   const quickLinks = [
     { name: "Home", href: "/" },
     { name: "Segments", href: "/segments" },
-    { name: "Partners", href: "/partners/gold" },
     { name: "About Us", href: "/about-us" }
   ];
 
@@ -91,27 +84,34 @@ const Footer = () => {
               className="lg:col-span-5 space-y-4 sm:space-y-6"
             >
               {/* Logo and Name */}
-              <motion.div
-                className="flex items-center gap-3 sm:gap-4"
-                whileHover={{ scale: 1.02 }}
-                transition={{ duration: 0.3 }}
+              <a
+                href="https://www.austrc.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block"
               >
-                <motion.img
-                  src="https://aust.edu/storage/files/Rc46weeV7JQjH1VT1DoCUWUMsIp81dtIMvZBMlpm.jpg"
-                  alt="AUST Robotics Club"
-                  className="h-12 w-12 sm:h-16 sm:w-16 rounded-xl border-2 border-amber-400/30 p-1 bg-amber-950/40 backdrop-blur-sm"
-                  whileHover={{ rotate: [0, -5, 5, 0] }}
-                  transition={{ duration: 0.5 }}
-                />
-                <div>
-                  <h3 className="text-lg sm:text-xl font-bold text-amber-300">
-                    AUST Robotics Club
-                  </h3>
-                  <p className="text-xs sm:text-sm text-amber-100/70 mt-1">
-                    Building a Safer Future Through Robotics
-                  </p>
-                </div>
-              </motion.div>
+                <motion.div
+                  className="flex items-center gap-3 sm:gap-4 cursor-pointer"
+                  whileHover={{ scale: 1.02 }}
+                  transition={{ duration: 0.3 }}
+                >
+                  <motion.img
+                    src="https://aust.edu/storage/files/Rc46weeV7JQjH1VT1DoCUWUMsIp81dtIMvZBMlpm.jpg"
+                    alt="AUST Robotics Club"
+                    className="h-12 w-12 sm:h-16 sm:w-16 rounded-xl border-2 border-amber-400/30 p-1 bg-amber-950/40 backdrop-blur-sm"
+                    whileHover={{ rotate: [0, -5, 5, 0] }}
+                    transition={{ duration: 0.5 }}
+                  />
+                  <div>
+                    <h3 className="text-lg sm:text-xl font-bold text-amber-300">
+                      AUST Robotics Club
+                    </h3>
+                    <p className="text-xs sm:text-sm text-amber-100/70 mt-1">
+                      Building a Safer Future Through Robotics
+                    </p>
+                  </div>
+                </motion.div>
+              </a>
 
               {/* Description */}
               <motion.p
