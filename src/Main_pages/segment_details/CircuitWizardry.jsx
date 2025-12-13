@@ -14,7 +14,7 @@ const CircuitWizardry = () => {
     name: "Circuit Wizardry",
     badge: "EEE Showdown",
     category: "Electronics · Circuit Design",
-    prizePool: "৳25,000+",
+    prizePool: "To be Announced",
     expectedTeams: "30+ teams",
     difficulty: "Intermediate",
     image: "https://ik.imagekit.io/mekt2pafz/CIRCUITWizardy.png",
@@ -26,9 +26,9 @@ const CircuitWizardry = () => {
       "Focus on clean reasoning, not just formula memorization.",
       "Ideal for EEE-focused sponsors and technical partners."
     ],
-    schedule: "Day 1, 2:00 PM - 4:30 PM",
-    place: "Lab Room 102, Block B",
-    registrationDeadline: "Dec 14, 2025"
+    schedule: "To be Announced",
+    place: "To be Announced",
+    registrationDeadline: "To be Announced"
   };
 
   return (
@@ -205,7 +205,7 @@ const CircuitWizardry = () => {
                   </button>
                   <button className="flex-1 rounded-xl bg-gradient-to-r from-[#1AB7AA] to-[#0fa399] px-4 py-2.5 text-sm font-semibold text-white hover:shadow-lg hover:shadow-[#1AB7AA]/50 transition-all duration-200 flex items-center justify-center gap-2" onClick={() => window.open(googleFormsLink, "_blank")}>
                     <UserPlus className="h-4 w-4" />
-                    Enroll Now
+                    Register Now
                   </button>
                 </motion.div>
               </div>

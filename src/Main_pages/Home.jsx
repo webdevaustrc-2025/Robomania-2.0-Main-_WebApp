@@ -884,7 +884,7 @@ const Carousel3D = ({
 const Home = () => {
   const navigate = useNavigate();
 
-  // ⏳ Countdown to 20 December 2025
+  // ⏳ Countdown to 3 January 2026
   const [timeLeft, setTimeLeft] = useState({
     days: "00",
     hours: "00",
@@ -893,7 +893,7 @@ const Home = () => {
   });
 
   useEffect(() => {
-    const targetDate = new Date("2025-12-20T00:00:00"); // local time
+    const targetDate = new Date("2026-01-03T00:00:00"); // local time
 
     const timer = setInterval(() => {
       const now = new Date().getTime();
@@ -1017,7 +1017,7 @@ const Home = () => {
                 className="relative z-10 mt-8 flex flex-col items-center gap-4"
               >
                 <span className="text-xs sm:text-sm uppercase tracking-[0.25em] text-amber-200/80">
-                  Event starts in · 20 December 2025
+                  Event starts in · 3 January 2026
                 </span>
 
                 <div className="flex flex-wrap justify-center gap-3 sm:gap-4">
@@ -1052,7 +1052,7 @@ const Home = () => {
                 <div className="flex flex-wrap justify-center gap-4 text-xs sm:text-sm text-amber-100/80">
                   <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-amber-500/10 border border-amber-400/40">
                     <Zap className="w-4 h-4 text-amber-300" />
-                    <span>6+ Competition Segments</span>
+                    <span>6 Competition Segments</span>
                   </div>
                   <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-amber-500/10 border border-amber-400/40">
                     <Trophy className="w-4 h-4 text-amber-300" />
@@ -1062,18 +1062,6 @@ const Home = () => {
                     <span className="w-2 h-2 rounded-full bg-emerald-400" />
                     <span>Powered by AUSTRC</span>
                   </div>
-                </div>
-
-                <div className="flex flex-wrap justify-center gap-3">
-
-                  <motion.button
-                    whileHover={{ scale: 1.05, y: -1 }}
-                    whileTap={{ scale: 0.96 }}
-                    onClick={() => navigate("/partners/premier")}
-                    className="inline-flex items-center gap-2 px-6 py-2.5 rounded-xl border border-amber-400/60 bg-black/40 text-amber-100 font-semibold text-sm sm:text-base"
-                  >
-                    Become a Partner
-                  </motion.button>
                 </div>
               </motion.div>
 

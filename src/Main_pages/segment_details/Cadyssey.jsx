@@ -14,7 +14,7 @@ const Cadyssey = () => {
     name: "Cadyssey",
     badge: "Design Studio",
     category: "CAD · Product Design",
-    prizePool: "৳20,000+",
+    prizePool: "To be Announced",
     expectedTeams: "20–25 designers",
     difficulty: "Intermediate – Advanced",
     image: "https://ik.imagekit.io/mekt2pafz/Cadyssey.png",
@@ -26,9 +26,9 @@ const Cadyssey = () => {
       "Judging based on accuracy, constraints, clarity and documentation.",
       "Valuable for companies looking for design-oriented recruits."
     ],
-    schedule: "Day 1, 11:00 AM - 3:00 PM",
-    place: "Computer Lab, Block C",
-    registrationDeadline: "Dec 13, 2025"
+    schedule: "To be Announced",
+    place: "To be Announced",
+    registrationDeadline: "To be Announced"
   };
 
   return (
@@ -205,7 +205,7 @@ const Cadyssey = () => {
                   </button>
                   <button className="flex-1 rounded-xl bg-gradient-to-r from-[#1AB7AA] to-[#0fa399] px-4 py-2.5 text-sm font-semibold text-white hover:shadow-lg hover:shadow-[#1AB7AA]/50 transition-all duration-200 flex items-center justify-center gap-2" onClick={() => window.open(googleFormsLink, "_blank")}>
                     <UserPlus className="h-4 w-4" />
-                    Enroll Now
+                    Register Now
                   </button>
                 </motion.div>
               </div>

@@ -11,7 +11,7 @@ const InnovatorsArena = () => {
     name: "Innovators' Arena",
     badge: "Project Showcase",
     category: "Research · Prototyping",
-    prizePool: "৳50,000+ (grants & awards)",
+    prizePool: "To be Announced",
     expectedTeams: "25–30 projects",
     difficulty: "Open — Research / Product",
     image: "https://ik.imagekit.io/mekt2pafz/Innovatorsarena.png",
@@ -23,9 +23,9 @@ const InnovatorsArena = () => {
       "Great for CV/portfolio building and research exposure.",
       "Sponsors can directly interact with teams and short-list talent."
     ],
-    schedule: "Day 2-3, 2:00 PM - 5:00 PM",
-    place: "Exhibition Hall, 1st Floor",
-    registrationDeadline: "Dec 20, 2025"
+    schedule: "To be Announced",
+    place: "To be Announced",
+    registrationDeadline: "To be Announced"
   };
 
   return (
@@ -202,7 +202,7 @@ const InnovatorsArena = () => {
                   </button>
                   <button className="flex-1 rounded-xl bg-gradient-to-r from-[#1AB7AA] to-[#0fa399] px-4 py-2.5 text-sm font-semibold text-white hover:shadow-lg hover:shadow-[#1AB7AA]/50 transition-all duration-200 flex items-center justify-center gap-2">
                     <UserPlus className="h-4 w-4" />
-                    Enroll Now
+                    Register Now
                   </button>
                 </motion.div>
               </div>

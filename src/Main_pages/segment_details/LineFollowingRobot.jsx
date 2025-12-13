@@ -14,7 +14,7 @@ const LineFollowingRobot = () => {
     name: "Line Following Robot",
     badge: "Core Robotics Skill",
     category: "Embedded Systems · Control",
-    prizePool: "৳30,000+",
+    prizePool: "To be Announced",
     expectedTeams: "40+ teams",
     difficulty: "Beginner – Intermediate",
     image: "https://ik.imagekit.io/mekt2pafz/LineFollowingRobot.png",
@@ -26,9 +26,9 @@ const LineFollowingRobot = () => {
       "Focus on sensor tuning, PID control and hardware optimization.",
       "Ideal gateway event for newcomers to robotics."
     ],
-    schedule: "Day 1, 9:00 AM - 12:00 PM",
-    place: "Track B, Ground Floor",
-    registrationDeadline: "Dec 14, 2025"
+    schedule: "To be Announced",
+    place: "To be Announced",
+    registrationDeadline: "To be Announced"
   };
 
   return (
@@ -205,7 +205,7 @@ const LineFollowingRobot = () => {
                   </button>
                   <button className="flex-1 rounded-xl bg-gradient-to-r from-[#1AB7AA] to-[#0fa399] px-4 py-2.5 text-sm font-semibold text-white hover:shadow-lg hover:shadow-[#1AB7AA]/50 transition-all duration-200 flex items-center justify-center gap-2" onClick={() => window.open(googleFormsLink, "_blank")}>
                     <UserPlus className="h-4 w-4" />
-                    Enroll Now
+                    Register Now
                   </button>
                 </motion.div>
               </div>

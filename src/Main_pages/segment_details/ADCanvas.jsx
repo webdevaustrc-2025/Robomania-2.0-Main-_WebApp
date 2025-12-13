@@ -11,7 +11,7 @@ const ADCanvas = () => {
     name: "ADCanvas",
     badge: "Creative Tech + Marketing",
     category: "Branding · Storytelling",
-    prizePool: "৳15,000+",
+    prizePool: "To be Announced",
     expectedTeams: "15–20 teams",
     difficulty: "Open Creative",
     image: "https://ik.imagekit.io/mekt2pafz/ADCanvas.png",
@@ -23,9 +23,9 @@ const ADCanvas = () => {
       "Suited for participants from both technical and creative backgrounds.",
       "Sponsors can directly see how their brand or cause could be positioned."
     ],
-    schedule: "Day 2, 3:00 PM - 5:30 PM",
-    place: "Auditorium, Ground Floor",
-    registrationDeadline: "Dec 17, 2025"
+    schedule: "To be Announced",
+    place: "To be Announced",
+    registrationDeadline: "To be Announced"
   };
 
   return (
@@ -204,7 +204,7 @@ const ADCanvas = () => {
                   </button>
                   <button className="flex-1 rounded-xl bg-gradient-to-r from-[#1AB7AA] to-[#0fa399] px-4 py-2.5 text-sm font-semibold text-white hover:shadow-lg hover:shadow-[#1AB7AA]/50 transition-all duration-200 flex items-center justify-center gap-2">
                     <UserPlus className="h-4 w-4" />
-                    Enroll Now
+                    Register Now
                   </button>
                 </motion.div>
               </div>

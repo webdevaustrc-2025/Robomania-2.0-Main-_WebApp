@@ -14,7 +14,7 @@ const RoboOlympiad = () => {
     name: "Robo Olympiad",
     badge: "Ultimate Robotics Challenge",
     category: "Multi-Event Competition · Team Strategy",
-    prizePool: "৳20,000",
+    prizePool: "To be Announced",
     image: "https://ik.imagekit.io/mekt2pafz/Robomania%202.0/robo%20olympiad.png?updatedAt=1765578419230",
     tagline: "A multi-event robotics competition that challenges teams to excel across diverse robotic disciplines.",
     detailedDescription: "The Robot Olympiad is the knowledge-driven segment of Robomania 2.0, designed to test the intellectual depth, analytical thinking, and technical understanding of individuals passionate about robotics, automation, and artificial intelligence. This solo competition is crafted to evaluate not just what you know—but how you apply it. If you’re confident in your concepts, theories, and problem-solving skills, the Robot Olympiad is your arena.",
@@ -24,9 +24,9 @@ const RoboOlympiad = () => {
       "Competitive environment with top teams recognized and awarded.",
       "Opportunities for networking with fellow robotics enthusiasts."
     ],
-    schedule: "Day 3, 9:00 AM - 12:00 PM",
-    place: "TT Ground",
-    registrationDeadline: "Dec 17, 2025"
+    schedule: "To be Announced",
+    place: "To be Announced",
+    registrationDeadline: "To be Announced"
   };
 
   return (
@@ -214,7 +214,7 @@ const RoboOlympiad = () => {
                   </button>
                   <button className="flex-1 rounded-xl bg-gradient-to-r from-[#1AB7AA] to-[#0fa399] px-4 py-2.5 text-sm font-semibold text-white hover:shadow-lg hover:shadow-[#1AB7AA]/50 transition-all duration-200 flex items-center justify-center gap-2" onClick={() => window.open(googleFormsLink, "_blank")}>
                     <UserPlus className="h-4 w-4" />
-                    Enroll Now
+                    Register Now
                   </button>
                 </motion.div>
               </div>

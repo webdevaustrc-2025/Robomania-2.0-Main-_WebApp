@@ -14,7 +14,7 @@ const RoboProjectHackathon = () => {
     name: "RoboProject Hackathon",
     badge: "24-Hour Build Sprint",
     category: "Hackathon · Rapid Prototyping",
-    prizePool: "৳40,000+",
+    prizePool: "To be Announced",
     expectedTeams: "20–25 teams",
     difficulty: "Intermediate – Advanced",
     image: "https://ik.imagekit.io/mekt2pafz/RoboProjectHackathon(2).png",
@@ -26,9 +26,9 @@ const RoboProjectHackathon = () => {
       "On-ground mentorship and late-night build atmosphere.",
       "Perfect for brands supporting startup-style problem solving."
     ],
-    schedule: "Day 3, 6:00 PM - Day 4, 6:00 PM",
-    place: "Makerspace, Block D",
-    registrationDeadline: "Dec 22, 2025"
+    schedule: "To be Announced",
+    place: "To be Announced",
+    registrationDeadline: "To be Announced"
   };
 
   return (
@@ -205,7 +205,7 @@ const RoboProjectHackathon = () => {
                   </button>
                   <button className="flex-1 rounded-xl bg-gradient-to-r from-[#1AB7AA] to-[#0fa399] px-4 py-2.5 text-sm font-semibold text-white hover:shadow-lg hover:shadow-[#1AB7AA]/50 transition-all duration-200 flex items-center justify-center gap-2" onClick={() => window.open(googleFormsLink, "_blank")}>
                     <UserPlus className="h-4 w-4" />
-                    Enroll Now
+                    Register Now
                   </button>
                 </motion.div>
               </div>
