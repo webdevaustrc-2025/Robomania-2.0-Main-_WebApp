@@ -357,6 +357,17 @@ const Contact = () => {
                   icon={<Globe className="w-5 h-5" />}
 
                 />
+                
+                <TeamMemberCard
+                  name="Md. Asifuzzaman Shanto"
+                  position="Senior Sub Executive, Web Development Team"
+                  role="Website Development Team"
+                  
+                  email="asifuzzaman2105@gmail.com"
+                  image="https://ik.imagekit.io/mekt2pafz/2574a410-cb7b-42f7-b214-6de7bae84064.jfif?updatedAt=1766269724206"
+                  icon={<Globe className="w-5 h-5" />}
+                  linkedin="https://www.linkedin.com/in/md-asifuzzaman-shanto-241b13280/"
+                />
 
                 <TeamMemberCard
                   name="Shakhawat Hossain Shoaib"

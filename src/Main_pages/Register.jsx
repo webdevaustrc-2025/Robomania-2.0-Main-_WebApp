@@ -4,8 +4,8 @@ import { db } from "../firebase";
 import { setDoc, doc, getDoc } from "firebase/firestore";
 import { IconAlertCircle, IconCheck } from "@tabler/icons-react";
 
-const soloSegments = ["Cadyssey", "Circuit Wizardry"];
-const teamSegments = ["Soccer Bot", "Line Following Robot", "RoboProject Hackathon", "Robo Olympiad"];
+const soloSegments = ["Cadyssey", "Circuit Wizardry", "Robo Olympiad"];
+const teamSegments = ["Soccer Bot", "Line Following Robot", "RoboProject Hackathon"];
 
 // Google Forms URLs for each segment
 const googleFormsLinks = {
@@ -671,15 +671,15 @@ export default function Register() {
               <h2 className="text-2xl font-bold text-amber-300 mb-6 text-center">
                 Solo Events
               </h2>
-              <div className="grid md:grid-cols-2 gap-6">
-                {soloSegments.map((segment) => (
+              <div className="grid md:grid-cols-2 gap-6 justify-items-center">
+                {soloSegments.map((segment, index) => (
                   <motion.button
                     key={segment}
                     variants={itemVariants}
                     onClick={() => handleSegmentSelect(segment)}
                     whileHover={{ scale: 1.05, y: -5 }}
                     whileTap={{ scale: 0.95 }}
-                    className="relative p-8 rounded-2xl border border-amber-500/30 bg-amber-950/30 backdrop-blur-xl text-left group overflow-hidden"
+                    className={`relative p-8 rounded-2xl border border-amber-500/30 bg-amber-950/30 backdrop-blur-xl text-left group overflow-hidden w-full ${soloSegments.length % 2 === 1 && index === soloSegments.length - 1 ? 'md:col-span-2 md:max-w-[calc(50%-12px)]' : ''}`}
                     style={{
                       boxShadow:
                         "0 0 30px rgba(251, 191, 36, 0.15), inset 0 1px 0 rgba(251, 191, 36, 0.1)",
@@ -707,15 +707,15 @@ export default function Register() {
               <h2 className="text-2xl font-bold text-amber-300 mb-6 text-center">
                 Team Events
               </h2>
-              <div className="grid md:grid-cols-2 gap-6">
-                {teamSegments.map((segment) => (
+              <div className="grid md:grid-cols-2 gap-6 justify-items-center">
+                {teamSegments.map((segment, index) => (
                   <motion.button
                     key={segment}
                     variants={itemVariants}
                     onClick={() => handleSegmentSelect(segment)}
                     whileHover={{ scale: 1.05, y: -5 }}
                     whileTap={{ scale: 0.95 }}
-                    className="relative p-8 rounded-2xl border border-amber-500/30 bg-amber-950/30 backdrop-blur-xl text-left group overflow-hidden"
+                    className={`relative p-8 rounded-2xl border border-amber-500/30 bg-amber-950/30 backdrop-blur-xl text-left group overflow-hidden w-full ${teamSegments.length % 2 === 1 && index === teamSegments.length - 1 ? 'md:col-span-2 md:max-w-[calc(50%-12px)]' : ''}`}
                     style={{
                       boxShadow:
                         "0 0 30px rgba(251, 191, 36, 0.15), inset 0 1px 0 rgba(251, 191, 36, 0.1)",
