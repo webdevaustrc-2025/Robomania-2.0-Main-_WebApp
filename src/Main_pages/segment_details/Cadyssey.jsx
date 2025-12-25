@@ -7,7 +7,7 @@ const Cadyssey = () => {
   const navigate = useNavigate();
   const [showComingSoon, setShowComingSoon] = useState(false);
 
-  const googleFormsLink = "https://forms.gle/8BunRjjdnAf2ev8NA";
+  const googleFormsLink = "https://registration.austrc.com/Cadyssey";
 
   const segment = {
     id: 5,
@@ -28,7 +28,7 @@ const Cadyssey = () => {
     ],
     schedule: "To be Announced",
     place: "To be Announced",
-    registrationDeadline: "To be Announced"
+    registrationDeadline: "27 December,2025"
   };
 
   return (
@@ -199,10 +199,16 @@ const Cadyssey = () => {
                   transition={{ delay: 0.24, duration: 0.35 }}
                   className="mt-6 flex flex-wrap gap-3 sm:gap-4"
                 >
-                  <button onClick={() => setShowComingSoon(true)} className="flex-1 rounded-xl border border-[#D1BA83]/60 bg-black/50 px-4 py-2.5 text-sm font-semibold text-[#D1BA83] hover:bg-[#D1BA83]/10 transition-colors duration-200 flex items-center justify-center gap-2">
-                    <BookOpen className="h-4 w-4" />
-                    Rule Book
-                  </button>
+                  <a
+  href="https://tinyurl.com/CADyssey"   
+  target="_blank"
+  rel="noopener noreferrer"
+  className="flex-1 rounded-xl border border-[#D1BA83]/60 bg-black/50 px-4 py-2.5 text-sm font-semibold text-[#D1BA83] hover:bg-[#D1BA83]/10 transition-colors duration-200 flex items-center justify-center gap-2"
+>
+  <BookOpen className="h-4 w-4" />
+  Rule Book
+</a>
+
                   <button className="flex-1 rounded-xl bg-gradient-to-r from-[#1AB7AA] to-[#0fa399] px-4 py-2.5 text-sm font-semibold text-white hover:shadow-lg hover:shadow-[#1AB7AA]/50 transition-all duration-200 flex items-center justify-center gap-2" onClick={() => window.open(googleFormsLink, "_blank")}>
                     <UserPlus className="h-4 w-4" />
                     Register Now
