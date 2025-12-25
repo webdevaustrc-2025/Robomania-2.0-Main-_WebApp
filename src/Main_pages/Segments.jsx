@@ -1,6 +1,13 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { ChevronDown, BookOpen, Calendar, MapPin, Clock, X } from "lucide-react";
+import {
+  ChevronDown,
+  BookOpen,
+  Calendar,
+  MapPin,
+  Clock,
+  X,
+} from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
 const segmentsData = [
@@ -37,8 +44,8 @@ const segmentsData = [
     image: "https://ik.imagekit.io/mekt2pafz/CIRCUITWizardy.png",
     schedule: "Day 1, 2:00 PM - 4:30 PM",
     place: "Lab Room 102, Block B",
-    registrationDeadline: "Dec 14, 2025",
-    rulebookLink: "#", // Update this with actual rulebook link
+    registrationDeadline: "27 December,2025",
+    rulebookLink: "https://tinyurl.com/Circuit-Wizardry", // Update this with actual rulebook link
   },
   {
     id: 5,
@@ -49,8 +56,8 @@ const segmentsData = [
     image: "https://ik.imagekit.io/mekt2pafz/Cadyssey.png",
     schedule: "Day 1, 11:00 AM - 3:00 PM",
     place: "Computer Lab, Block C",
-    registrationDeadline: "Dec 13, 2025",
-    rulebookLink: "#", // Update this with actual rulebook link
+    registrationDeadline: "27 December,2025",
+    rulebookLink: "https://tinyurl.com/CADyssey", // Update this with actual rulebook link
   },
   {
     id: 6,
@@ -61,8 +68,8 @@ const segmentsData = [
     image: "https://ik.imagekit.io/mekt2pafz/RoboProjectHackathon(2).png",
     schedule: "Day 3, 6:00 PM - Day 4, 6:00 PM",
     place: "Makerspace, Block D",
-    registrationDeadline: "Dec 22, 2025",
-    rulebookLink: "#", // Update this with actual rulebook link
+    registrationDeadline: "27 December,2025",
+    rulebookLink: "https://tinyurl.com/RoboProject-Hackathon", // Update this with actual rulebook link
   },
   {
     id: 8,
@@ -70,12 +77,14 @@ const segmentsData = [
     slug: "robo-olympiad",
     badge: "Ultimate Robotics Challenge",
     category: "Multi-Event Competition · Team Strategy",
-    image: "https://ik.imagekit.io/mekt2pafz/Robomania%202.0/robo%20olympiad.png?updatedAt=1765578419230",
+    image:
+      "https://ik.imagekit.io/mekt2pafz/Robomania%202.0/robo%20olympiad.png?updatedAt=1765578419230",
     schedule: "Day 3, 9:00 AM - 12:00 PM",
     place: "TT Ground",
     registrationDeadline: "Dec 17, 2025",
     prizePool: "20,000",
-    description: "An exciting multi-event robotics competition that challenges teams to excel across diverse robotic disciplines. Teams compete in various categories showcasing skills in automation, precision, and innovation. This ultimate robotics challenge brings together the best robotic talents for an unforgettable experience.",
+    description:
+      "An exciting multi-event robotics competition that challenges teams to excel across diverse robotic disciplines. Teams compete in various categories showcasing skills in automation, precision, and innovation. This ultimate robotics challenge brings together the best robotic talents for an unforgettable experience.",
     rulebookLink: "#", // Update this with actual rulebook link
   },
 ];
@@ -97,7 +106,7 @@ const itemVariants = {
   },
 };
 
-const SegmentCard = ({ segment, index, onDetails, onRulebook, onShowComingSoon }) => {
+const SegmentCard = ({ segment, index, onDetails, onRulebook }) => {
   return (
     <motion.div
       variants={itemVariants}
@@ -194,7 +203,9 @@ const SegmentCard = ({ segment, index, onDetails, onRulebook, onShowComingSoon }
               <p className="text-neutral-400 text-[10px] sm:text-xs uppercase tracking-wide">
                 Registration Deadline
               </p>
-              <p className="text-neutral-100 font-medium">{segment.registrationDeadline}</p>
+              <p className="text-neutral-100 font-medium">
+                {segment.registrationDeadline}
+              </p>
             </div>
           </div>
         </div>
@@ -233,20 +244,20 @@ const SegmentCard = ({ segment, index, onDetails, onRulebook, onShowComingSoon }
 
           {/* Rulebook Button */}
           <motion.button
-            onClick={() => onShowComingSoon()}
+            onClick={(e) => onRulebook(segment, e)}
             whileHover={{ scale: 1.04, y: -1 }}
             whileTap={{ scale: 0.96 }}
             className="
-              flex-1 inline-flex items-center justify-center gap-2
-              rounded-full px-3 py-2.5
-              text-xs sm:text-sm font-semibold
-              bg-gradient-to-r from-[#31010b] via-[#3f0202] to-[#31010b]
-              text-[#e3deca]
-              border border-[#F5bb46]/70
-              shadow-[0_8px_25px_rgba(0,0,0,0.7)]
-              hover:shadow-[0_0_25px_rgba(150,110,80,0.5)]
-              transition-all duration-300
-            "
+                flex-1 inline-flex items-center justify-center gap-2
+                rounded-full px-3 py-2.5
+                text-xs sm:text-sm font-semibold
+                bg-gradient-to-r from-[#31010b] via-[#3f0202] to-[#31010b]
+                text-[#e3deca]
+                border border-[#F5bb46]/70
+                shadow-[0_8px_25px_rgba(0,0,0,0.7)]
+                hover:shadow-[0_0_25px_rgba(150,110,80,0.5)]
+                transition-all duration-300
+              "
           >
             <BookOpen className="h-3.5 w-3.5" />
             <span>Rule Book</span>
@@ -275,8 +286,16 @@ const Segments = () => {
 
   const handleRulebook = (segment, e) => {
     e.preventDefault();
-    console.log(`Opening rulebook for: ${segment.name}`);
-    // Link will be handled by the anchor tag href
+    e.stopPropagation();
+
+    const link = segment?.rulebookLink;
+
+    if (!link || link === "#") {
+      setShowComingSoon(true);
+      return;
+    }
+
+    window.open(link, "_blank", "noopener,noreferrer");
   };
 
   return (
@@ -301,9 +320,10 @@ const Segments = () => {
               </span>
             </h1>
             <p className="text-neutral-300 text-base leading-relaxed max-w-3xl">
-              Explore our diverse competition segments designed to challenge and inspire
-              robotics enthusiasts at every level. Each segment offers a unique opportunity
-              to showcase your skills, creativity, and problem-solving abilities.
+              Explore our diverse competition segments designed to challenge and
+              inspire robotics enthusiasts at every level. Each segment offers a
+              unique opportunity to showcase your skills, creativity, and
+              problem-solving abilities.
             </p>
           </motion.div>
         </header>
@@ -322,7 +342,7 @@ const Segments = () => {
               index={index}
               onDetails={handleDetails}
               onRulebook={handleRulebook}
-              onShowComingSoon={() => setShowComingSoon(true)}
+              // onShowComingSoon={() => setShowComingSoon(true)}
             />
           ))}
         </motion.div>
@@ -362,14 +382,18 @@ const Segments = () => {
                   🎉
                 </motion.div>
 
-                <h2 className="text-3xl font-bold text-[#F5CB7A]">Coming Soon!</h2>
+                <h2 className="text-3xl font-bold text-[#F5CB7A]">
+                  Coming Soon!
+                </h2>
 
                 <p className="text-neutral-300 text-sm leading-relaxed">
-                  The rule books for all segments are being prepared with all the exciting details and guidelines.
+                  The rule books for all segments are being prepared with all
+                  the exciting details and guidelines.
                 </p>
 
                 <p className="text-neutral-400 text-xs">
-                  Check back soon for the complete rulesets and competition guidelines.
+                  Check back soon for the complete rulesets and competition
+                  guidelines.
                 </p>
 
                 <motion.button

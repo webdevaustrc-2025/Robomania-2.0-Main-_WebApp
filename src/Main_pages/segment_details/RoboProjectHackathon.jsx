@@ -1,13 +1,26 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { ChevronLeft, Trophy, Users, Target, Cpu, BookOpen, UserPlus, Calendar, MapPin, Clock, X } from "lucide-react";
+import {
+  ChevronLeft,
+  Trophy,
+  Users,
+  Target,
+  Cpu,
+  BookOpen,
+  UserPlus,
+  Calendar,
+  MapPin,
+  Clock,
+  X,
+} from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
 const RoboProjectHackathon = () => {
   const navigate = useNavigate();
   const [showComingSoon, setShowComingSoon] = useState(false);
 
-  const googleFormsLink = "https://forms.gle/XjGvtc4FjBHk8jrq9";
+  const googleFormsLink =
+    "https://registration.austrc.com/RoboProject-Hackathon";
 
   const segment = {
     id: 6,
@@ -18,17 +31,20 @@ const RoboProjectHackathon = () => {
     expectedTeams: "20–25 teams",
     difficulty: "Intermediate – Advanced",
     image: "https://ik.imagekit.io/mekt2pafz/RoboProjectHackathon(2).png",
-    tagline: "Build, break, fix and ship a working mini-robotic solution in record time.",
-    shortDescription: "A fast-paced mini robotics hackathon where teams build functional robots or automation demos within tight time and resource limits.",
-    detailedDescription: "In RoboProject Hackathon, teams brainstorm, prototype and iterate at high speed to solve a themed challenge — from assistive robots to industrial helpers. Limited components and time test not just technical skill, but teamwork, planning and execution. Sponsors align with high-energy innovation, resilience and practical engineering.",
+    tagline:
+      "Build, break, fix and ship a working mini-robotic solution in record time.",
+    shortDescription:
+      "A fast-paced mini robotics hackathon where teams build functional robots or automation demos within tight time and resource limits.",
+    detailedDescription:
+      "In RoboProject Hackathon, teams brainstorm, prototype and iterate at high speed to solve a themed challenge — from assistive robots to industrial helpers. Limited components and time test not just technical skill, but teamwork, planning and execution. Sponsors align with high-energy innovation, resilience and practical engineering.",
     highlights: [
       "Theme-based challenge revealed at the start of the hackathon.",
       "On-ground mentorship and late-night build atmosphere.",
-      "Perfect for brands supporting startup-style problem solving."
+      "Perfect for brands supporting startup-style problem solving.",
     ],
     schedule: "To be Announced",
     place: "To be Announced",
-    registrationDeadline: "To be Announced"
+    registrationDeadline: "27 December,2025",
   };
 
   return (
@@ -99,8 +115,11 @@ const RoboProjectHackathon = () => {
                 </div>
 
                 <p className="relative mt-3 text-[11px] text-neutral-300/80 leading-snug">
-                  Designed visual for <span className="text-[#F5CB7A] font-semibold">{segment.name}</span> —
-                  as seen in Robomania 2.0 branding.
+                  Designed visual for{" "}
+                  <span className="text-[#F5CB7A] font-semibold">
+                    {segment.name}
+                  </span>{" "}
+                  — as seen in Robomania 2.0 branding.
                 </p>
               </motion.div>
 
@@ -143,7 +162,6 @@ const RoboProjectHackathon = () => {
                       </div>
                     </div>
                   )}
-
                   {segment.schedule && (
                     <div className="rounded-2xl border border-[#F5CB7A]/40 bg-black/45 px-3 py-2.5 flex items-start gap-2">
                       <div className="mt-0.5 flex h-7 w-7 items-center justify-center rounded-xl bg-[#F5CB7A]/10">
@@ -159,7 +177,6 @@ const RoboProjectHackathon = () => {
                       </div>
                     </div>
                   )}
-
                   {segment.place && (
                     <div className="rounded-2xl border border-[#1AB7AA]/40 bg-black/45 px-3 py-2.5 flex items-start gap-2">
                       <div className="mt-0.5 flex h-7 w-7 items-center justify-center rounded-xl bg-[#1AB7AA]/10">
@@ -175,22 +192,22 @@ const RoboProjectHackathon = () => {
                       </div>
                     </div>
                   )}
-
-                {segment.registrationDeadline && (
-                  <div className="rounded-2xl border border-red-500/60 bg-black/45 px-3 py-2.5 flex items-start gap-2">
-                    <div className="mt-0.5 flex h-7 w-7 items-center justify-center rounded-xl bg-red-500/10">
-                      <Clock className="h-4 w-4 text-red-500" />
+                  {segment.registrationDeadline && (
+                    <div className="rounded-2xl border border-red-500/60 bg-black/45 px-3 py-2.5 flex items-start gap-2">
+                      <div className="mt-0.5 flex h-7 w-7 items-center justify-center rounded-xl bg-red-500/10">
+                        <Clock className="h-4 w-4 text-red-500" />
+                      </div>
+                      <div className="space-y-0.5">
+                        <p className="text-[11px] uppercase tracking-wide text-neutral-300/70">
+                          Registration Deadline
+                        </p>
+                        <p className="text-sm font-semibold text-red-500">
+                          {segment.registrationDeadline}
+                        </p>
+                      </div>
                     </div>
-                    <div className="space-y-0.5">
-                      <p className="text-[11px] uppercase tracking-wide text-neutral-300/70">
-                        Registration Deadline
-                      </p>
-                      <p className="text-sm font-semibold text-red-500">
-                        {segment.registrationDeadline}
-                      </p>
-                    </div>
-                  </div>
-                )}                </motion.div>
+                  )}{" "}
+                </motion.div>
 
                 {/* Action buttons */}
                 <motion.div
@@ -199,11 +216,25 @@ const RoboProjectHackathon = () => {
                   transition={{ delay: 0.24, duration: 0.35 }}
                   className="mt-6 flex flex-wrap gap-3 sm:gap-4"
                 >
-                  <button onClick={() => setShowComingSoon(true)} className="flex-1 rounded-xl border border-[#D1BA83]/60 bg-black/50 px-4 py-2.5 text-sm font-semibold text-[#D1BA83] hover:bg-[#D1BA83]/10 transition-colors duration-200 flex items-center justify-center gap-2">
+                  <a
+                    href="https://tinyurl.com/RoboProject-Hackathon"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex-1 rounded-xl border border-[#D1BA83]/60 bg-black/50 px-4 py-2.5 text-sm font-semibold text-[#D1BA83] hover:bg-[#D1BA83]/10 transition-colors duration-200 flex items-center justify-center gap-2"
+                  >
                     <BookOpen className="h-4 w-4" />
                     Rule Book
-                  </button>
-                  <button className="flex-1 rounded-xl bg-gradient-to-r from-[#1AB7AA] to-[#0fa399] px-4 py-2.5 text-sm font-semibold text-white hover:shadow-lg hover:shadow-[#1AB7AA]/50 transition-all duration-200 flex items-center justify-center gap-2" onClick={() => window.open(googleFormsLink, "_blank")}>
+                  </a>
+                  <button
+                    className="flex-1 rounded-xl bg-gradient-to-r from-[#1AB7AA] to-[#0fa399] px-4 py-2.5 text-sm font-semibold text-white hover:shadow-lg hover:shadow-[#1AB7AA]/50 transition-all duration-200 flex items-center justify-center gap-2"
+                    onClick={() =>
+                      window.open(
+                        googleFormsLink,
+                        "_blank",
+                        "noopener,noreferrer"
+                      )
+                    }
+                  >
                     <UserPlus className="h-4 w-4" />
                     Register Now
                   </button>
@@ -285,14 +316,18 @@ const RoboProjectHackathon = () => {
                   🎉
                 </motion.div>
 
-                <h2 className="text-3xl font-bold text-[#F5CB7A]">Coming Soon!</h2>
+                <h2 className="text-3xl font-bold text-[#F5CB7A]">
+                  Coming Soon!
+                </h2>
 
                 <p className="text-neutral-300 text-sm leading-relaxed">
-                  The rule book for this segment is being prepared with all the exciting details and guidelines.
+                  The rule book for this segment is being prepared with all the
+                  exciting details and guidelines.
                 </p>
 
                 <p className="text-neutral-400 text-xs">
-                  Check back soon for the complete ruleset and competition guidelines.
+                  Check back soon for the complete ruleset and competition
+                  guidelines.
                 </p>
 
                 <motion.button
