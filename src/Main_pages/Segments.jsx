@@ -20,8 +20,8 @@ const segmentsData = [
     image: "https://ik.imagekit.io/mekt2pafz/SoccerBot.png",
     schedule: "Day 2, 10:00 AM - 2:00 PM",
     place: "Main Arena, Block A",
-    registrationDeadline: "Dec 15, 2025",
-    rulebookLink: "#", // Update this with actual rulebook link
+    registrationDeadline: "27 December, 2025",
+    rulebookLink: "https://tinyurl.com/SoccerBot-Rlbk", // Update this with actual rulebook link
   },
   {
     id: 2,
@@ -32,8 +32,8 @@ const segmentsData = [
     image: "https://ik.imagekit.io/mekt2pafz/LineFollowingRobot.png",
     schedule: "Day 1, 9:00 AM - 12:00 PM",
     place: "Track B, Ground Floor",
-    registrationDeadline: "Dec 14, 2025",
-    rulebookLink: "#", // Update this with actual rulebook link
+    registrationDeadline: "27 December, 2025",
+    rulebookLink: "https://tinyurl.com/LFR-Rulebook", // Update this with actual rulebook link
   },
   {
     id: 4,

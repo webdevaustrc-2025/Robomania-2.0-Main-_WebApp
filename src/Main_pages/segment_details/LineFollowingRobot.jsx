@@ -1,13 +1,25 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { ChevronLeft, Trophy, Users, Target, Cpu, BookOpen, UserPlus, Calendar, MapPin, Clock, X } from "lucide-react";
+import {
+  ChevronLeft,
+  Trophy,
+  Users,
+  Target,
+  Cpu,
+  BookOpen,
+  UserPlus,
+  Calendar,
+  MapPin,
+  Clock,
+  X,
+} from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
 const LineFollowingRobot = () => {
   const navigate = useNavigate();
   const [showComingSoon, setShowComingSoon] = useState(false);
 
-  const googleFormsLink = "https://forms.gle/vEK2PBbLqTMDodmX8";
+  //const googleFormsLink = "https://forms.gle/vEK2PBbLqTMDodmX8";
 
   const segment = {
     id: 2,
@@ -18,17 +30,20 @@ const LineFollowingRobot = () => {
     expectedTeams: "40+ teams",
     difficulty: "Beginner – Intermediate",
     image: "https://ik.imagekit.io/mekt2pafz/LineFollowingRobot.png",
-    tagline: "Master sensors, control logic and optimization in a classic robotics challenge.",
-    shortDescription: "Build a robot that can autonomously follow complex tracks with high speed and accuracy. Perfect for participants stepping into robotics or sharpening control skills.",
-    detailedDescription: "In the Line Following Robot challenge, participants design sensor arrays, tune motor drivers and implement control algorithms to track black/white paths and dynamic curves. Tracks may include sharp turns, lane splits and speed sections. This segment demonstrates fundamental automation principles and offers sponsors a strong connection to skill-building and learning-focused robotics.",
+    tagline:
+      "Master sensors, control logic and optimization in a classic robotics challenge.",
+    shortDescription:
+      "Build a robot that can autonomously follow complex tracks with high speed and accuracy. Perfect for participants stepping into robotics or sharpening control skills.",
+    detailedDescription:
+      "In the Line Following Robot challenge, participants design sensor arrays, tune motor drivers and implement control algorithms to track black/white paths and dynamic curves. Tracks may include sharp turns, lane splits and speed sections. This segment demonstrates fundamental automation principles and offers sponsors a strong connection to skill-building and learning-focused robotics.",
     highlights: [
       "Multiple track difficulties: beginner, intermediate and pro lanes.",
       "Focus on sensor tuning, PID control and hardware optimization.",
-      "Ideal gateway event for newcomers to robotics."
+      "Ideal gateway event for newcomers to robotics.",
     ],
     schedule: "To be Announced",
     place: "To be Announced",
-    registrationDeadline: "To be Announced"
+    registrationDeadline: "27 December,2025",
   };
 
   return (
@@ -99,8 +114,11 @@ const LineFollowingRobot = () => {
                 </div>
 
                 <p className="relative mt-3 text-[11px] text-neutral-300/80 leading-snug">
-                  Designed visual for <span className="text-[#F5CB7A] font-semibold">{segment.name}</span> —
-                  as seen in Robomania 2.0 branding.
+                  Designed visual for{" "}
+                  <span className="text-[#F5CB7A] font-semibold">
+                    {segment.name}
+                  </span>{" "}
+                  — as seen in Robomania 2.0 branding.
                 </p>
               </motion.div>
 
@@ -143,7 +161,6 @@ const LineFollowingRobot = () => {
                       </div>
                     </div>
                   )}
-
                   {segment.schedule && (
                     <div className="rounded-2xl border border-[#F5CB7A]/40 bg-black/45 px-3 py-2.5 flex items-start gap-2">
                       <div className="mt-0.5 flex h-7 w-7 items-center justify-center rounded-xl bg-[#F5CB7A]/10">
@@ -159,7 +176,6 @@ const LineFollowingRobot = () => {
                       </div>
                     </div>
                   )}
-
                   {segment.place && (
                     <div className="rounded-2xl border border-[#1AB7AA]/40 bg-black/45 px-3 py-2.5 flex items-start gap-2">
                       <div className="mt-0.5 flex h-7 w-7 items-center justify-center rounded-xl bg-[#1AB7AA]/10">
@@ -175,22 +191,22 @@ const LineFollowingRobot = () => {
                       </div>
                     </div>
                   )}
-
-                {segment.registrationDeadline && (
-                  <div className="rounded-2xl border border-red-500/60 bg-black/45 px-3 py-2.5 flex items-start gap-2">
-                    <div className="mt-0.5 flex h-7 w-7 items-center justify-center rounded-xl bg-red-500/10">
-                      <Clock className="h-4 w-4 text-red-500" />
+                  {segment.registrationDeadline && (
+                    <div className="rounded-2xl border border-red-500/60 bg-black/45 px-3 py-2.5 flex items-start gap-2">
+                      <div className="mt-0.5 flex h-7 w-7 items-center justify-center rounded-xl bg-red-500/10">
+                        <Clock className="h-4 w-4 text-red-500" />
+                      </div>
+                      <div className="space-y-0.5">
+                        <p className="text-[11px] uppercase tracking-wide text-neutral-300/70">
+                          Registration Deadline
+                        </p>
+                        <p className="text-sm font-semibold text-red-500">
+                          {segment.registrationDeadline}
+                        </p>
+                      </div>
                     </div>
-                    <div className="space-y-0.5">
-                      <p className="text-[11px] uppercase tracking-wide text-neutral-300/70">
-                        Registration Deadline
-                      </p>
-                      <p className="text-sm font-semibold text-red-500">
-                        {segment.registrationDeadline}
-                      </p>
-                    </div>
-                  </div>
-                )}                </motion.div>
+                  )}{" "}
+                </motion.div>
 
                 {/* Action buttons */}
                 <motion.div
@@ -199,14 +215,25 @@ const LineFollowingRobot = () => {
                   transition={{ delay: 0.24, duration: 0.35 }}
                   className="mt-6 flex flex-wrap gap-3 sm:gap-4"
                 >
-                  <button onClick={() => setShowComingSoon(true)} className="flex-1 rounded-xl border border-[#D1BA83]/60 bg-black/50 px-4 py-2.5 text-sm font-semibold text-[#D1BA83] hover:bg-[#D1BA83]/10 transition-colors duration-200 flex items-center justify-center gap-2">
+                  <a
+                    href="https://tinyurl.com/LFR-Rulebook"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex-1 rounded-xl border border-[#D1BA83]/60 bg-black/50 px-4 py-2.5 text-sm font-semibold text-[#D1BA83] hover:bg-[#D1BA83]/10 transition-colors duration-200 flex items-center justify-center gap-2"
+                  >
                     <BookOpen className="h-4 w-4" />
                     Rule Book
-                  </button>
-                  <button className="flex-1 rounded-xl bg-gradient-to-r from-[#1AB7AA] to-[#0fa399] px-4 py-2.5 text-sm font-semibold text-white hover:shadow-lg hover:shadow-[#1AB7AA]/50 transition-all duration-200 flex items-center justify-center gap-2" onClick={() => window.open(googleFormsLink, "_blank")}>
+                  </a>
+
+                  <a
+                    href="https://registration.austrc.com/RoboMania_LFR"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex-1 rounded-xl bg-gradient-to-r from-[#1AB7AA] to-[#0fa399] px-4 py-2.5 text-sm font-semibold text-white hover:shadow-lg hover:shadow-[#1AB7AA]/50 transition-all duration-200 flex items-center justify-center gap-2"
+                  >
                     <UserPlus className="h-4 w-4" />
                     Register Now
-                  </button>
+                  </a>
                 </motion.div>
               </div>
             </div>
@@ -285,14 +312,18 @@ const LineFollowingRobot = () => {
                   🎉
                 </motion.div>
 
-                <h2 className="text-3xl font-bold text-[#F5CB7A]">Coming Soon!</h2>
+                <h2 className="text-3xl font-bold text-[#F5CB7A]">
+                  Coming Soon!
+                </h2>
 
                 <p className="text-neutral-300 text-sm leading-relaxed">
-                  The rule book for this segment is being prepared with all the exciting details and guidelines.
+                  The rule book for this segment is being prepared with all the
+                  exciting details and guidelines.
                 </p>
 
                 <p className="text-neutral-400 text-xs">
-                  Check back soon for the complete ruleset and competition guidelines.
+                  Check back soon for the complete ruleset and competition
+                  guidelines.
                 </p>
 
                 <motion.button

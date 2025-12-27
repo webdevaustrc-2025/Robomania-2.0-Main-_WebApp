@@ -1,6 +1,18 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { ChevronLeft, Trophy, Users, Target, Cpu, BookOpen, UserPlus, Calendar, MapPin, Clock, X } from "lucide-react";
+import {
+  ChevronLeft,
+  Trophy,
+  Users,
+  Target,
+  Cpu,
+  BookOpen,
+  UserPlus,
+  Calendar,
+  MapPin,
+  Clock,
+  X,
+} from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
 const SoccerBot = () => {
@@ -18,17 +30,20 @@ const SoccerBot = () => {
     expectedTeams: "35–40 teams",
     difficulty: "Intermediate – Advanced",
     image: "https://ik.imagekit.io/mekt2pafz/SoccerBot.png",
-    tagline: "Where strategy, control systems and football passion collide under stadium lights.",
-    shortDescription: "Design and program autonomous robots that can dribble, pass and score without human control. Bring your A-game in mechanics, control, and decision-making.",
-    detailedDescription: "Soccer Bot is a high-energy arena event where teams deploy custom robots to outplay opponents in fast-paced matches. Bots must detect the ball, navigate the field, avoid collisions and execute scoring strategies in real time. The segment highlights sensor fusion, control algorithms, and competitive team coordination — making it a perfect magnet for audience engagement and sponsor visibility.",
+    tagline:
+      "Where strategy, control systems and football passion collide under stadium lights.",
+    shortDescription:
+      "Design and program autonomous robots that can dribble, pass and score without human control. Bring your A-game in mechanics, control, and decision-making.",
+    detailedDescription:
+      "Soccer Bot is a high-energy arena event where teams deploy custom robots to outplay opponents in fast-paced matches. Bots must detect the ball, navigate the field, avoid collisions and execute scoring strategies in real time. The segment highlights sensor fusion, control algorithms, and competitive team coordination — making it a perfect magnet for audience engagement and sponsor visibility.",
     highlights: [
       "3v3 style autonomous robot matches with live commentary.",
       "Real-time decision-making using sensors, control loops or AI.",
-      "Stadium-like experience with cheering zones and live score display."
+      "Stadium-like experience with cheering zones and live score display.",
     ],
     schedule: "To be Announced",
     place: "To be Announced",
-    registrationDeadline: "To be Announced"
+    registrationDeadline: "27 December,2025",
   };
 
   return (
@@ -106,8 +121,11 @@ const SoccerBot = () => {
                 </div>
 
                 <p className="relative mt-3 text-[11px] text-neutral-300/80 leading-snug">
-                  Designed visual for <span className="text-[#F5CB7A] font-semibold">{segment.name}</span> —
-                  as seen in Robomania 2.0 branding.
+                  Designed visual for{" "}
+                  <span className="text-[#F5CB7A] font-semibold">
+                    {segment.name}
+                  </span>{" "}
+                  — as seen in Robomania 2.0 branding.
                 </p>
               </motion.div>
 
@@ -153,7 +171,6 @@ const SoccerBot = () => {
                       </div>
                     </div>
                   )}
-
                   {segment.schedule && (
                     <div className="rounded-2xl border border-[#F5CB7A]/40 bg-black/45 px-3 py-2.5 flex items-start gap-2">
                       <div className="mt-0.5 flex h-7 w-7 items-center justify-center rounded-xl bg-[#F5CB7A]/10">
@@ -169,7 +186,6 @@ const SoccerBot = () => {
                       </div>
                     </div>
                   )}
-
                   {segment.place && (
                     <div className="rounded-2xl border border-[#1AB7AA]/40 bg-black/45 px-3 py-2.5 flex items-start gap-2">
                       <div className="mt-0.5 flex h-7 w-7 items-center justify-center rounded-xl bg-[#1AB7AA]/10">
@@ -185,22 +201,22 @@ const SoccerBot = () => {
                       </div>
                     </div>
                   )}
-
-                {segment.registrationDeadline && (
-                  <div className="rounded-2xl border border-red-500/60 bg-black/45 px-3 py-2.5 flex items-start gap-2">
-                    <div className="mt-0.5 flex h-7 w-7 items-center justify-center rounded-xl bg-red-500/10">
-                      <Clock className="h-4 w-4 text-red-500" />
+                  {segment.registrationDeadline && (
+                    <div className="rounded-2xl border border-red-500/60 bg-black/45 px-3 py-2.5 flex items-start gap-2">
+                      <div className="mt-0.5 flex h-7 w-7 items-center justify-center rounded-xl bg-red-500/10">
+                        <Clock className="h-4 w-4 text-red-500" />
+                      </div>
+                      <div className="space-y-0.5">
+                        <p className="text-[11px] uppercase tracking-wide text-neutral-300/70">
+                          Registration Deadline
+                        </p>
+                        <p className="text-sm font-semibold text-red-500">
+                          {segment.registrationDeadline}
+                        </p>
+                      </div>
                     </div>
-                    <div className="space-y-0.5">
-                      <p className="text-[11px] uppercase tracking-wide text-neutral-300/70">
-                        Registration Deadline
-                      </p>
-                      <p className="text-sm font-semibold text-red-500">
-                        {segment.registrationDeadline}
-                      </p>
-                    </div>
-                  </div>
-                )}                </motion.div>
+                  )}{" "}
+                </motion.div>
 
                 {/* Action buttons */}
                 <motion.div
@@ -209,14 +225,25 @@ const SoccerBot = () => {
                   transition={{ delay: 0.24, duration: 0.35 }}
                   className="mt-6 flex flex-wrap gap-3 sm:gap-4"
                 >
-                  <button onClick={() => setShowComingSoon(true)} className="flex-1 rounded-xl border border-[#D1BA83]/60 bg-black/50 px-4 py-2.5 text-sm font-semibold text-[#D1BA83] hover:bg-[#D1BA83]/10 transition-colors duration-200 flex items-center justify-center gap-2">
+                  <a
+                    href="https://tinyurl.com/SoccerBot-Rlbk"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex-1 rounded-xl border border-[#D1BA83]/60 bg-black/50 px-4 py-2.5 text-sm font-semibold text-[#D1BA83] hover:bg-[#D1BA83]/10 transition-colors duration-200 flex items-center justify-center gap-2"
+                  >
                     <BookOpen className="h-4 w-4" />
                     Rule Book
-                  </button>
-                  <button className="flex-1 rounded-xl bg-gradient-to-r from-[#1AB7AA] to-[#0fa399] px-4 py-2.5 text-sm font-semibold text-white hover:shadow-lg hover:shadow-[#1AB7AA]/50 transition-all duration-200 flex items-center justify-center gap-2" onClick={() => window.open(googleFormsLink, "_blank")}>
+                  </a>
+
+                  <a
+                    href="https://registration.austrc.com/RoboMania_Soccer"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex-1 rounded-xl bg-gradient-to-r from-[#1AB7AA] to-[#0fa399] px-4 py-2.5 text-sm font-semibold text-white hover:shadow-lg hover:shadow-[#1AB7AA]/50 transition-all duration-200 flex items-center justify-center gap-2"
+                  >
                     <UserPlus className="h-4 w-4" />
                     Register Now
-                  </button>
+                  </a>
                 </motion.div>
               </div>
             </div>
@@ -296,14 +323,18 @@ const SoccerBot = () => {
                   🎉
                 </motion.div>
 
-                <h2 className="text-3xl font-bold text-[#F5CB7A]">Coming Soon!</h2>
+                <h2 className="text-3xl font-bold text-[#F5CB7A]">
+                  Coming Soon!
+                </h2>
 
                 <p className="text-neutral-300 text-sm leading-relaxed">
-                  The rule book for this segment is being prepared with all the exciting details and guidelines.
+                  The rule book for this segment is being prepared with all the
+                  exciting details and guidelines.
                 </p>
 
                 <p className="text-neutral-400 text-xs">
-                  Check back soon for the complete ruleset and competition guidelines.
+                  Check back soon for the complete ruleset and competition
+                  guidelines.
                 </p>
 
                 <motion.button
