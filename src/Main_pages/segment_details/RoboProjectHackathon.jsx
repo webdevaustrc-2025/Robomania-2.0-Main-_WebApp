@@ -42,8 +42,8 @@ const RoboProjectHackathon = () => {
       "On-ground mentorship and late-night build atmosphere.",
       "Perfect for brands supporting startup-style problem solving.",
     ],
-    schedule: "Day 3, 6:00 PM - Day 4, 6:00 PM",
-    place: "Makerspace, Block D",
+    schedule: "To be Announced",
+    place: "To be Announced",
     registrationDeadline: "12 January 2026",
   };
 

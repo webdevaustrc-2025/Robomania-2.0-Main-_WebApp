@@ -26,8 +26,8 @@ const Cadyssey = () => {
       "Judging based on accuracy, constraints, clarity and documentation.",
       "Valuable for companies looking for design-oriented recruits."
     ],
-    schedule: "Day 1, 11:00 AM - 3:00 PM",
-    place: "Computer Lab, Block C",
+    schedule: "To be Announced",
+    place: "To be Announced",
     registrationDeadline: "12 January, 2026"
   };
 
