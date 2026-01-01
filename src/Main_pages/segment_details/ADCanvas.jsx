@@ -25,7 +25,7 @@ const ADCanvas = () => {
     ],
     schedule: "To be Announced",
     place: "To be Announced",
-    registrationDeadline: "To be Announced"
+    registrationDeadline: "12 January, 2026"
   };
 
   return (

@@ -20,7 +20,7 @@ const segmentsData = [
     image: "https://ik.imagekit.io/mekt2pafz/SoccerBot.png",
     schedule: "Day 2, 10:00 AM - 2:00 PM",
     place: "Main Arena, Block A",
-    registrationDeadline: "27 December, 2025",
+    registrationDeadline: "12 January, 2026",
     rulebookLink: "https://tinyurl.com/SoccerBot-Rlbk", // Update this with actual rulebook link
   },
   {
@@ -32,7 +32,7 @@ const segmentsData = [
     image: "https://ik.imagekit.io/mekt2pafz/LineFollowingRobot.png",
     schedule: "Day 1, 9:00 AM - 12:00 PM",
     place: "Track B, Ground Floor",
-    registrationDeadline: "27 December, 2025",
+    registrationDeadline: "12 January, 2026",
     rulebookLink: "https://tinyurl.com/LFR-Rulebook", // Update this with actual rulebook link
   },
   {
@@ -44,7 +44,7 @@ const segmentsData = [
     image: "https://ik.imagekit.io/mekt2pafz/CIRCUITWizardy.png",
     schedule: "Day 1, 2:00 PM - 4:30 PM",
     place: "Lab Room 102, Block B",
-    registrationDeadline: "27 December,2025",
+    registrationDeadline: "12 January, 2026",
     rulebookLink: "https://tinyurl.com/Circuit-Wizardry", // Update this with actual rulebook link
   },
   {
@@ -56,7 +56,7 @@ const segmentsData = [
     image: "https://ik.imagekit.io/mekt2pafz/Cadyssey.png",
     schedule: "Day 1, 11:00 AM - 3:00 PM",
     place: "Computer Lab, Block C",
-    registrationDeadline: "27 December,2025",
+    registrationDeadline: "12 January, 2026",
     rulebookLink: "https://tinyurl.com/CADyssey", // Update this with actual rulebook link
   },
   {
@@ -68,7 +68,7 @@ const segmentsData = [
     image: "https://ik.imagekit.io/mekt2pafz/RoboProjectHackathon(2).png",
     schedule: "Day 3, 6:00 PM - Day 4, 6:00 PM",
     place: "Makerspace, Block D",
-    registrationDeadline: "27 December,2025",
+    registrationDeadline: "12 January, 2026",
     rulebookLink: "https://tinyurl.com/RoboProject-Hackathon", // Update this with actual rulebook link
   },
   {
@@ -81,7 +81,7 @@ const segmentsData = [
       "https://ik.imagekit.io/mekt2pafz/Robomania%202.0/robo%20olympiad.png?updatedAt=1765578419230",
     schedule: "Day 3, 9:00 AM - 12:00 PM",
     place: "TT Ground",
-    registrationDeadline: "27 December, 2025",
+    registrationDeadline: "12 January, 2026",
     prizePool: "20,000",
     description:
       "An exciting multi-event robotics competition that challenges teams to excel across diverse robotic disciplines. Teams compete in various categories showcasing skills in automation, precision, and innovation. This ultimate robotics challenge brings together the best robotic talents for an unforgettable experience.",

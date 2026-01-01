@@ -28,7 +28,7 @@ const CircuitWizardry = () => {
     ],
     schedule: "To be Announced",
     place: "To be Announced",
-    registrationDeadline: "27 December"
+    registrationDeadline: "12 January, 2026"
   };
 
   return (

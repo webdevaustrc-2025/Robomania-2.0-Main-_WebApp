@@ -39,7 +39,7 @@ const RoboOlympiad = () => {
     ],
     schedule: "To be Announced",
     place: "To be Announced",
-    registrationDeadline: "27 December,2025",
+    registrationDeadline: "12 January, 2026",
   };
 
   return (
