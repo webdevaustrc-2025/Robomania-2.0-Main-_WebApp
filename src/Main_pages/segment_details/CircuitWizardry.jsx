@@ -26,9 +26,9 @@ const CircuitWizardry = () => {
       "Focus on clean reasoning, not just formula memorization.",
       "Ideal for EEE-focused sponsors and technical partners."
     ],
-    schedule: "To be Announced",
-    place: "To be Announced",
-    registrationDeadline: "27 December"
+    schedule: "Day 1, 2:00 PM - 4:30 PM",
+    place: "Lab Room 102, Block B",
+    registrationDeadline: "12 January, 2026"
   };
 
   return (

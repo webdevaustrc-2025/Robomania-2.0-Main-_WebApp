@@ -18,8 +18,8 @@ const segmentsData = [
     badge: "Flagship Arena Event",
     category: "Autonomous Robotics · Game AI",
     image: "https://ik.imagekit.io/mekt2pafz/SoccerBot.png",
-    schedule: "To Be Announced",
-    place: "To Be Announced",
+    schedule: "Day 2, 10:00 AM - 2:00 PM",
+    place: "Main Arena, Block A",
     registrationDeadline: "12 January, 2026",
     rulebookLink: "https://tinyurl.com/SoccerBot-Rlbk", // Update this with actual rulebook link
   },
@@ -30,8 +30,8 @@ const segmentsData = [
     badge: "Core Robotics Skill",
     category: "Embedded Systems · Control",
     image: "https://ik.imagekit.io/mekt2pafz/LineFollowingRobot.png",
-    schedule: "To Be Announced",
-    place: "To Be Announced",
+    schedule: "Day 1, 9:00 AM - 12:00 PM",
+    place: "Track B, Ground Floor",
     registrationDeadline: "12 January, 2026",
     rulebookLink: "https://tinyurl.com/LFR-Rulebook", // Update this with actual rulebook link
   },
@@ -42,8 +42,8 @@ const segmentsData = [
     badge: "EEE Showdown",
     category: "Electronics · Circuit Design",
     image: "https://ik.imagekit.io/mekt2pafz/CIRCUITWizardy.png",
-    schedule: "To Be Announced",
-    place: "To Be Announced",
+    schedule: "Day 1, 2:00 PM - 4:30 PM",
+    place: "Lab Room 102, Block B",
     registrationDeadline: "12 January, 2026",
     rulebookLink: "https://tinyurl.com/Circuit-Wizardry", // Update this with actual rulebook link
   },
@@ -54,8 +54,8 @@ const segmentsData = [
     badge: "Design Studio",
     category: "CAD · Product Design",
     image: "https://ik.imagekit.io/mekt2pafz/Cadyssey.png",
-    schedule: "To Be Announced",
-    place: "To Be Announced",
+    schedule: "Day 1, 11:00 AM - 3:00 PM",
+    place: "Computer Lab, Block C",
     registrationDeadline: "12 January, 2026",
     rulebookLink: "https://tinyurl.com/CADyssey", // Update this with actual rulebook link
   },
@@ -66,8 +66,8 @@ const segmentsData = [
     badge: "24-Hour Build Sprint",
     category: "Hackathon · Rapid Prototyping",
     image: "https://ik.imagekit.io/mekt2pafz/RoboProjectHackathon(2).png",
-    schedule: "To Be Announced",
-    place: "To Be Announced",
+    schedule: "Day 3, 6:00 PM - Day 4, 6:00 PM",
+    place: "Makerspace, Block D",
     registrationDeadline: "12 January, 2026",
     rulebookLink: "https://tinyurl.com/RoboProject-Hackathon", // Update this with actual rulebook link
   },
@@ -79,8 +79,8 @@ const segmentsData = [
     category: "Multi-Event Competition · Team Strategy",
     image:
       "https://ik.imagekit.io/mekt2pafz/Robomania%202.0/robo%20olympiad.png?updatedAt=1765578419230",
-    schedule: "To Be Announced",
-    place: "To Be Announced",
+    schedule: "Day 3, 9:00 AM - 12:00 PM",
+    place: "TT Ground",
     registrationDeadline: "12 January, 2026",
     prizePool: "20,000",
     description:
