@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { X, ChevronLeft, Award, Trophy, Gift, Crown } from "lucide-react";
+import { X, ChevronLeft, Award, Trophy, Crown } from "lucide-react";
 /* eslint-enable no-unused-vars */
 
 const categories = [
@@ -33,27 +33,12 @@ const categories = [
     glowColor: "#3b82f6",
     description: "Honoring the remarkable leaders of our teams",
     images: [
-      "https://ik.imagekit.io/mekt2pafz/Team%20Leads/36.jpg?updatedAt=1773685019953",
-      "https://ik.imagekit.io/mekt2pafz/Team%20Leads/35.jpg?updatedAt=1773685019937",
       "https://ik.imagekit.io/mekt2pafz/Team%20Leads/34.jpg?updatedAt=1773685019903",
       "https://ik.imagekit.io/mekt2pafz/Team%20Leads/32.jpg?updatedAt=1773685019807",
+      "https://ik.imagekit.io/mekt2pafz/Team%20Leads/36.jpg?updatedAt=1773685019953",
+      "https://ik.imagekit.io/mekt2pafz/Team%20Leads/35.jpg?updatedAt=1773685019937",
       "https://ik.imagekit.io/mekt2pafz/Team%20Leads/37.jpg?updatedAt=1773685019454",
       "https://ik.imagekit.io/mekt2pafz/Team%20Leads/5.jpg?updatedAt=1773685017934"
-    ]
-  },
-  {
-    name: "Token of Gratitude",
-    icon: Gift,
-    color: "from-pink-500 to-rose-500",
-    glowColor: "#ec4899",
-    description: "Recognizing those who made a difference",
-    images: [
-      "https://ik.imagekit.io/mekt2pafz/Token%20of%20Gratitude/40.jpg?updatedAt=1773685526234",
-      "https://ik.imagekit.io/mekt2pafz/Token%20of%20Gratitude/38.jpg?updatedAt=1773685526095",
-      "https://ik.imagekit.io/mekt2pafz/Token%20of%20Gratitude/41.jpg?updatedAt=1773685526053",
-      "https://ik.imagekit.io/mekt2pafz/Token%20of%20Gratitude/42.jpg?updatedAt=1773685526019",
-      "https://ik.imagekit.io/mekt2pafz/Token%20of%20Gratitude/23.jpg?updatedAt=1773685525770",
-      "https://ik.imagekit.io/mekt2pafz/Token%20of%20Gratitude/1.jpg?updatedAt=1773685524165"
     ]
   },
   {
@@ -260,7 +245,7 @@ export default function WinnersGalleryModal() {
                     <p className="text-amber-200/70 text-lg">Celebrate the achievements of our champions</p>
                   </motion.div>
 
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 w-full">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 w-full [&>:last-child]:sm:col-span-2 [&>:last-child]:sm:mx-auto [&>:last-child]:sm:w-fit">
                     {categories.map((cat, idx) => {
                       const IconComponent = cat.icon;
                       return (
